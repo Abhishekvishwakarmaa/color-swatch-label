@@ -15,3 +15,13 @@
     {% endif %}
   {% endfor %}
 </div>   
+
+
+
+<style>
+  img.custom-color-swatch-collection {
+    width: 30px;
+    height: 32px;
+    margin: 0 5px;
+}
+</style>
