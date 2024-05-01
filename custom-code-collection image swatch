@@ -19,7 +19,12 @@ https://prnt.sc/fKgrT01B-S4F
   {% endfor %}
 </div>   
 
+
+
+card-product.liquid
 https://prnt.sc/rNuWHoW17ZTI
+
+
 
 <script>
      {% for product in collection.products %}
