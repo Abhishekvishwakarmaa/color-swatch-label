@@ -1,4 +1,7 @@
-                <div class="main-custom-color-swatch-CP">
+https://prnt.sc/fKgrT01B-S4F
+
+
+<div class="main-custom-color-swatch-CP">
   {% for option in product.options %}
     {% if option == 'Color' %}
       {% assign index = forloop.index0 %}
@@ -16,7 +19,24 @@
   {% endfor %}
 </div>   
 
+https://prnt.sc/rNuWHoW17ZTI
 
+<script>
+     {% for product in collection.products %}
+       {% for option in product.options %}
+        {% for variant in product.variants %}
+          $(".cus_v-{{ variant.id }}").each(function() {
+                $(this).click(function() {    // this is the mouseenter event handler
+                $(".main-cus-img-{{ product.id }} .main-cus-img-c").attr("srcset", $(this).attr("data-src"));
+            }, 
+                              function() {               // this is the mouseleave event handler
+                $(".main-cus-img-{{ product.id }} .main-cus-img-c").attr("srcset",$(this).attr("data-src"), "{{ product.media[0] | img_url: 'master' }}");    // this will revert it back to the original image (tv.jpg)
+            });
+          });
+         {% endfor %}
+       {% endfor %}
+     {% endfor %}
+</script>
 
 <style>
   img.custom-color-swatch-collection {
